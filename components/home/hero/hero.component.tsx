@@ -9,11 +9,12 @@ const Hero = () => {
                 <Image
                     src='/images/site/me.jpg'
                     alt='me'
-                    width={300}
-                    height={300}
+                    width={350}
+                    height={350}
                 />
             </div>
-            <h1>Hi, Im a Mia</h1>
+            <h1>Hi, I'm Mia</h1>
+            <p>Welcome to blog!</p>
             <p>I am a blogger and a developer.</p>
         </section>
     )
