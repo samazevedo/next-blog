@@ -1,5 +1,6 @@
 import { PostHeader } from '../Post-header/Post-header.component'
 import styles from './Post-content.module.css'
+import ReactMarkdown from 'react-markdown'
 
 const POST_DATA = {
     title: 'How to build a website 1',
@@ -13,7 +14,7 @@ export function PostContent() {
     return (
         <article className={styles.content}>
             <PostHeader title={POST_DATA.title} image={imagePath} />
-            {POST_DATA.content}
+            <ReactMarkdown>{POST_DATA.content}</ReactMarkdown>
         </article>
     )
 }
