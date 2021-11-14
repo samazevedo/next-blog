@@ -1,5 +1,5 @@
-const ContactPage: React.FC = () => {
-    return <div>Contact Page</div>
-}
+import { ContactForm } from '../../components/Contact-form/Contact-form.component'
 
-export default ContactPage
+export default function Contact() {
+    return <ContactForm />
+}

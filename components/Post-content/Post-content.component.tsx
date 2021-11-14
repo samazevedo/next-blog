@@ -12,7 +12,7 @@ interface Props {
 export const PostContent: React.FC<Props> = ({ post }) => {
     const imagePath = `/images/posts/${post.slug}/${post.image}`
 
-    // // override the default image rendering
+    // override the default image rendering
     // const customRenderers = {
     //     image(image): JSX.Element {
     //         return (
