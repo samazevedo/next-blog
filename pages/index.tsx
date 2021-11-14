@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Hero from '../components/home/Hero/Hero.component'
 import { FeaturedPosts } from '../components/home/Featured-posts/Featured-posts.component'
-import { getFeaturedPosts } from '../utils/posts-util'
+import { getFeaturedPosts } from '../lib/posts-util'
 
 function HomePage({ posts }) {
     return (
