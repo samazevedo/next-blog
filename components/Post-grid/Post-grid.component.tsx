@@ -1,17 +1,10 @@
 import styles from './post-grid.module.css'
 import { PostItem } from '../Post-item/Post-item.component'
+import { Ipost } from '../../interfaces/interfaces'
 import React from 'react'
 
 interface Props {
-    posts: [
-        {
-            title: string
-            excerpt: string
-            image: string
-            date: string
-            slug: string
-        }
-    ]
+    posts: Ipost[]
 }
 
 export const PostGrid: React.FC<Props> = ({ posts }) => {

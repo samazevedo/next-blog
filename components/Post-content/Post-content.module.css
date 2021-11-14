@@ -12,7 +12,9 @@
 .content p {
     color: var(--color-grey-800);
 }
-
+.content img {
+    max-width: 100%;
+}
 .content .image {
     margin: var(--size-4) auto;
     width: 100%;
@@ -22,5 +24,8 @@
 @media (min-width: 768px) {
     .content {
         padding: var(--size-8);
+    }
+    .content img {
+        max-width: 650px;
     }
 }

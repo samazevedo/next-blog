@@ -1,15 +1,10 @@
 import styles from './Post-item.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Ipost } from '../../interfaces/interfaces'
 
 interface PostItemProps {
-    post: {
-        title: string
-        slug: string
-        date: string
-        excerpt: string
-        image: string
-    }
+    post: Ipost
 }
 
 export const PostItem: React.FC<PostItemProps> = ({ post }) => {
