@@ -1,11 +1,17 @@
 .post {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    background-color: var(--color-grey-800);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.3);
+    background: var(--white-color);
     text-align: center;
 }
 
 .post a {
-    color: var(--color-grey-100);
+    color: var(--black-color);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.post a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .image {
@@ -29,7 +35,7 @@
 
 .content time {
     font-style: italic;
-    color: var(--color-grey-300);
+    color: var(--secondary-color);
 }
 
 .content p {

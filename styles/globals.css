@@ -14,31 +14,18 @@ h6 {
 }
 
 body {
-    --color-primary-50: #c8b3ce;
-    --color-primary-100: #a07aaa;
-    --color-primary-200: #884c97;
-    --color-primary-300: #843897;
-    --color-primary-400: #732392;
-    --color-primary-500: #5a1f7a;
-    --color-primary-600: #480264;
-    --color-primary-700: #3d0261;
+    --primary-color: #ff4993;
+    --secondary-color: #a480cf;
+    --tertiary-color: #49b6ff;
+    --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #ccc;
 
     --color-success-100: #a2f0bc;
     --color-success-200: #12bd4b;
 
     --color-error-100: #f1acc9;
     --color-error-200: #a10c4a;
-
-    --color--grey-100: hsl(265, 19%, 88%);
-    --color--grey-200: hsl(265, 7%, 70%);
-    --color--grey-300: hsl(265, 6%, 66%);
-    --color--grey-400: hsl(265, 4%, 57%);
-    --color--grey-500: hsl(265, 4%, 53%);
-    --color--grey-600: hsl(265, 4%, 42%);
-    --color--grey-700: hsl(265, 4%, 42%);
-    --color--grey-800: hsl(265, 4%, 31%);
-    --color--grey-900: hsl(276, 5%, 20%);
-    --color--grey-1000: hsl(280, 5%, 13%);
 
     --size-1: 0.25rem;
     --size-2: 0.5rem;
@@ -50,7 +37,7 @@ body {
     --size-8: 2rem;
     --size-16: 4rem;
     margin: 0;
-    background-color: var(--color--grey-500);
+    background-color: var(--white-color);
     color: #252525;
     font-family: 'Roboto', sans-serif;
 }
