@@ -39,7 +39,7 @@ export default async function Contact(
             return
         }
         // insert data into the database
-        const db = client.db('samWebsite')
+        const db = client.db()
         try {
             const result = await db.collection('messages').insertOne(newMessage)
             newMessage._id = result.insertedId

@@ -21,11 +21,8 @@ body {
     --black-color: #000;
     --gray-color: #ccc;
 
-    --color-success-100: #a2f0bc;
-    --color-success-200: #12bd4b;
-
-    --color-error-100: #f1acc9;
-    --color-error-200: #a10c4a;
+    --color-success: #12bd4b;
+    --color-error: #f12e1c;
 
     --size-1: 0.25rem;
     --size-2: 0.5rem;
