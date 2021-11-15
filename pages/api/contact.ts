@@ -1,36 +1,54 @@
-const handler = (req, res) => {
-    // check if the request is valid => if POST
-    if (req.method === 'POST') {
-        // extract the data from the request
-        const { email, name, message } = req.body
+import { NextApiRequest, NextApiResponse } from 'next'
+import { MongoClient } from 'mongodb'
 
-        // validate the data
+export default async function Contact(
+    req: NextApiRequest,
+    res: NextApiResponse
+) {
+    if (req.method === 'POST') {
+        const { name, email, message } = req.body
+
         if (
-            !email ||
-            !email.includes('@') ||
             !name ||
             name.trim() === '' ||
+            !email ||
+            email.includes('@') === '' ||
             !message ||
             message.trim() === ''
         ) {
-            // if the data is not valid, send a 400 response
-            res.status(422).json({ message: 'Invalid input.' })
+            res.status(422).json({ message: 'Please enter all fields' })
             return
         }
-        // store it in a database
         const newMessage = {
-            email,
             name,
+            email,
             message,
+            _id:
+                Math.random().toString(36).substring(2, 15) +
+                Math.random().toString(36).substring(2, 15),
         }
-        console.log(newMessage)
+        // console.log(newMessage)
 
-        // send a 201 response
-        res.status(201).json({
-            message: 'Message sent succesfully!',
-            Message: newMessage,
-        })
+        let client
+        try {
+            client = await MongoClient.connect(
+                'mongodb+srv://sam-azev00:S7WBrUEYcoGIjkUb@cluster0.imcvb.mongodb.net/nextBlogMIA?retryWrites=true&w=majority'
+            )
+        } catch (error) {
+            res.status(500).json({ message: 'Cannot connect to database.' })
+            return
+        }
+        // insert data into the database
+        const db = client.db('samWebsite')
+        try {
+            const result = await db.collection('messages').insertOne(newMessage)
+            newMessage._id = result.insertedId
+        } catch (error) {
+            client.close()
+            res.status(500).json({ message: 'Failed to insert message.' })
+        }
+        client.close()
+
+        res.status(201).json({ message: 'Message sent Successfully!' })
     }
 }
-
-export default handler
