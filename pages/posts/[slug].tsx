@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { Ipost } from '../../interfaces/interfaces'
 import { PostContent } from '../../components/Post-content/Post-content.component'
 import { getPostData, getPostsFiles } from '../../lib/posts-util'
+import Head from 'next/head'
 
 interface Props {
     post: Ipost
@@ -10,6 +11,11 @@ interface Props {
 const SinglePostPage: React.FC<Props> = ({ post }) => {
     return (
         <Fragment>
+            <Head>
+                <title>{post.title}</title>
+                <meta name='description' content={post.excerpt} />
+            </Head>
+
             <PostContent post={post} />
         </Fragment>
     )
