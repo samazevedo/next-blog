@@ -38,3 +38,9 @@ body {
     color: #252525;
     font-family: 'Roboto', sans-serif;
 }
+
+.notifications {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+}
