@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './hero.module.css'
 
-export const Hero = () => {
+export const Hero: React.FC = () => {
     return (
         <section className={styles.hero}>
             <div className={styles.image}>
