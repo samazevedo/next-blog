@@ -3,7 +3,6 @@ import { Ipost } from '../../interfaces/interfaces'
 
 import styles from './Post-content.module.css'
 import ReactMarkdown from 'react-markdown'
-import Image from 'next/image'
 
 interface Props {
     post: Ipost

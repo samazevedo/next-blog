@@ -1,4 +1,4 @@
-import styles from './post-grid.module.css'
+import styles from './Post-grid.module.css'
 import { PostItem } from '../Post-item/Post-item.component'
 import { Ipost } from '../../interfaces/interfaces'
 import React from 'react'
