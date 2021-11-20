@@ -1,5 +1,5 @@
 import styles from './Featured-posts.module.css'
-import { PostGrid } from '../../Post-grid/Post-grid.component'
+import { PostGrid } from '../Post-grid/Post-grid.component'
 
 export const FeaturedPosts = ({ posts }) => {
     return (
