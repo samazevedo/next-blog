@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React, { Fragment } from 'react'
-import Hero from '../components/home/Hero/Hero.component'
+import { Hero } from '../components/home/Hero/Hero.component'
 import { FeaturedPosts } from '../components/home/Featured-posts/Featured-posts.component'
 import { getFeaturedPosts } from '../lib/posts-util'
 

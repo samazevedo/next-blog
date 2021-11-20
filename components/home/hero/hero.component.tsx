@@ -1,8 +1,7 @@
 import Image from 'next/image'
-
 import styles from './hero.module.css'
 
-const Hero = () => {
+export const Hero = () => {
     return (
         <section className={styles.hero}>
             <div className={styles.image}>
@@ -19,4 +18,3 @@ const Hero = () => {
         </section>
     )
 }
-export default Hero
